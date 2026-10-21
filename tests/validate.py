@@ -16,8 +16,10 @@ Validation (README criteria):
 
 Usage: python3 -I tests/validate.py <case_dir> [<case_dir> ...]
        python3 -I tests/validate.py tests            # all cases under tests/
+       python3 -I tests/validate.py -s industry_match.py tests
 """
 
+import argparse
 import csv
 import json
 import os
@@ -44,7 +46,7 @@ def load_lines(path):
         return [(r["description"], cents(r["price"])) for r in csv.DictReader(f)]
 
 
-def run_case(case_dir):
+def run_case(case_dir, solver):
     errors = []
     headers_dir = os.path.join(case_dir, "order_headers.csv")
     lines_dir = os.path.join(case_dir, "order_lines.csv")
@@ -80,7 +82,7 @@ def run_case(case_dir):
                               f"{sum(prices)} != {target[hid]}")
 
     out_path = os.path.join(case_dir, "solver_output.json")
-    proc = subprocess.run([sys.executable, "-I", SOLVER,
+    proc = subprocess.run([sys.executable, "-I", solver,
                            headers_dir, lines_dir, out_path],
                           capture_output=True, text=True, cwd=case_dir)
     solvable = expected["expect_solvable"]
@@ -134,13 +136,16 @@ def run_case(case_dir):
 
 
 def main():
-    args = sys.argv[1:]
-    if not args:
-        sys.exit(__doc__)
+    ap = argparse.ArgumentParser()
+    ap.add_argument("-s", "--solver", default=SOLVER,
+                    help="solver script to validate against")
+    ap.add_argument("cases", nargs="+")
+    args = ap.parse_args()
     # Solver runs with cwd=case_dir, so cases must be resolved absolutely.
-    args = [os.path.abspath(a) for a in args]
+    args.cases = [os.path.abspath(a) for a in args.cases]
+    solver = os.path.abspath(args.solver)
     dirs = []
-    for a in args:
+    for a in args.cases:
         if os.path.isdir(a) and not os.path.exists(os.path.join(a, "expected.json")):
             for root, _, _files in os.walk(a):
                 if os.path.exists(os.path.join(root, "expected.json")):
@@ -150,7 +155,7 @@ def main():
     dirs.sort()
     failed = 0
     for case in dirs:
-        errs = run_case(case)
+        errs = run_case(case, solver)
         if errs:
             failed += 1
             print(f"FAIL {case}")

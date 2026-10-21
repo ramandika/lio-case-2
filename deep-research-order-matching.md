@@ -108,3 +108,64 @@ Ilustrasi praktis: CP-SAT membuktikan optimal knapsack 100 item (kapasitas 2000)
 | 12 | [Austrin dkk., CCS 2013 (arXiv:1303.0609)](https://arxiv.org/abs/1303.0609) | Primary |
 
 *Laporan penuh: 12 temuan terverifikasi, 5 refutasi, 22 sumber disaring dari 5 sudut pencarian (akademik/kompleksitas, solver modeling, column generation, benchmark empiris, domain praktisi).*
+
+---
+
+# Riset #2 — Best Practice Industri (ERP & Rekonsiliasi Nyata)
+
+> Riset mendalam kedua: bagaimana industri nyata (ERP + AP automation) memulihkan tautan yang hilang antara order header dan order line.
+> Metodologi: 105 agent, 23 sumber, 111 klaim diekstrak, 25 diverifikasi adversarial — **25 terkonfirmasi, 0 terbantahkan** (verifikasi Okt 2026).
+
+---
+
+## Kesimpulan utama: industri TIDAK melakukan subset-sum eksak
+
+Industri membandingkan **quantity & price per line terhadap rantai dokumen (PO/receipt) dengan toleransi configurable**, dan menyerahkan selisih tak-terselesaikan ke *clearing account* atau antrean review manusia — bukan menyocokkan jumlah line ke total header.
+
+## 1. Perilaku ERP bawaan (terverifikasi 3-0, dokumen vendor aktif Okt 2026)
+
+| ERP | Mekanisme | Catatan kunci |
+|---|---|---|
+| **Oracle Fusion/EBS** | 2/3/4-way matching: `qty billed ≤ qty ordered` (+`≤ received`, +`≤ accepted`), `invoice price ≤ PO price` | Toleransi **per supplier site** — 8+ tipe bernama (Ordered/Received/Price/Total Amount…), bisa % atau absolut. 0 = tanpa selisih; kosong = tanpa batas. Breach → invoice di-*hold* (tak bisa dibayar). *Under-billing tidak membuat hold.* |
+| **SAP S/4HANA LIV** | Variance quantity & price per item vs tolerance key di OMR6 (table T169G: DQ/DW/KW/PP/PS/BW/St/AN/AP/BD…) | Model **dual (absolut + %), 3 band**: dalam limit → posting; bawah limit → posting + pesan; atas limit → posting tapi diblok. **Satu item bermasalah = seluruh invoice diblok.** Auto-release via job MRBR. |
+| **Business Central** (advanced PO matching, GA 1 Apr 2026) | 1 invoice line ↔ banyak PO/receipt line; review di level line & header | Alokasi multi-line **greedy deterministik**: isi berurutan sesuai urutan pilihan user sampai sisa quantity. Lookup order = **exact document-number** (20 karakter pertama, dikutip verbatim: *"not fuzzy matching, not an AI confidence score"*). Fallback baru ke semua line vendor. |
+
+- **Invoice tanpa goods receipt (SAP)**: tidak ditebak algoritmik — posting nilai ke **GR/IR clearing account** untuk diimbangi GR berikutnya; variance harga dipecah proporsional ke akun stok (BSX) dan price-difference (PRD); tolerance key DW dikonfigurasi *Check Limit* agar invoice jatuh ke state payment-block (pulih) bukan With Errors. Retry via job RMBABG00 + MRBR, interval yang direkomendasikan SAP 2–4 jam (klaim 2-1, sumber KBA).
+- **Batasan fitur baru BC**: tidak didukung prepayments, item charges, projects, blanket/intercompany; auto-receive tidak tersedia untuk line yang diterima sebagian atau lokasi directed put-away/pick.
+- **Coverage vendor**: klaim terverifikasi hanya dari Microsoft/Oracle/SAP — **NetSuite dan Dynamics 365 Finance (enterprise) tidak menghasilkan klaim terverifikasi**; gambar ERP adalah tiga vendor, bukan empat.
+
+## 2. Ketika pencarian eksak memang diperlukan: dibatasi & berlapis
+
+- **J.P. Morgan SSMP** (arXiv 2508.19218, ECAI 2025): rekonsiliasi murni-amount = NP-complete (reduksi dari subset-sum klasik pada ε=0) → justifikasi teoretis kenapa industri menghindari eksak.
+  - Mayoritas instans nyata **< 100 elemen per sisi** (assertion praktisi, bukan statistik terukur).
+  - Benchmark 3 keluarga solver: **DP pseudopolynomial dominan** di ukuran besar (~3.3 s @ M=N=100, ε=1), meet-in-the-middle cached O((1+ε)·2^{(M+N)/2}) kedua, **MILP (CPLEX 20.1.0) gagal skala**. Respons praktis: solver dibungkus greedy heuristic. (Catatan: MILP menang di ukuran kecil + ε besar.)
+- **SupplierRecon** (satu vendor kecil — contoh ilustratif, bukan norma industri): subset-sum 1-to-many otomatis **dibatasi window ≤ 8 baris AP terdekat, grup 2–5 baris**; fuzzy similarity (token/prefix) ambang 0.35 **hanya untuk merangkat ≤ 5 kandidat review manusia** ("Needs review") — tak pernah auto-match.
+
+## 3. Mengapa industri memilih toleransi atas eksak
+
+Round-off mata uang, pajak, partial delivery, receipt lintas periode — semuanya membuat kesamaan persis sering mustahil atau salah. Konsekuensinya:
+- Ambang **selalu configuration-driven** — tidak ada angka standar industri; semua konstanta yang didokumentasikan di atas adalah parameter satu tool, bukan default universel.
+- Model "hold/block + clearing account" memindahkan biaya dari *komputasi tebakan* ke *review manusia terarah*.
+- **Gap bukti**: tidak ada studi terpublikasi yang mengukur berapa banyak link nyata pulih dari bukti referensi (nomor PO di deskripsi line) vs harus ditebak algoritmik dari jumlah.
+
+## Pertanyaan terbuka (riset #2)
+
+1. Berapa nilai toleransi aktual yang dikonfigurasikan organisasi (Oracle Ordered %, SAP OMR6 PP/KW) di lapangan — sumber membuktikan kemampuan konfigurasi, bukan praktik?
+2. Bagaimana vendor AP-automation lain (Tipalti, Basware, Stampli; NetSuite vendor bill matching; D365 Finance) mengimplementasikan sum-to-total multi-line — belum terverifikasi?
+3. Berapa recovery rate nyata dari bukti referensi vs tebakan amount-based, dan apakah ada studi yang mengukurnya?
+4. Apakah ada produk produksi selain satu vendor terdokumentasi yang menjalankan subset-sum eksak (DP/MILP/MITM) window terbatas — atau desain toleransi-first sudah membuat eksak langka di industri?
+
+## Sumber utama (riset #2)
+
+| # | Sumber | Kualitas |
+|---|---|---|
+| 1 | [BC advanced PO matching — release plan 2026w1](https://learn.microsoft.com/en-us/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/match-purchase-invoices-multiple-order-receipt-lines) | Primary |
+| 2 | [BC: matching invoice drafts to orders](https://learn.microsoft.com/en-us/dynamics365/business-central/match-purchase-invoice-drafts-to-orders) | Primary |
+| 3 | [Oracle 26c: invoice tolerances](https://docs.oracle.com/en/cloud/saas/financials/26c/fappp/invoice-tolerances.html) | Primary |
+| 4 | [Oracle EBS: 2/3/4-way matching](https://docs.oracle.com/cd/A60725_05/html/comnls/us/ap/point04.htm) | Primary (era 11i) |
+| 5 | [SAP Learning: invoice variances S/4HANA](https://learning.sap.com/courses/invoice-verification-in-sap-s-4hana/entering-invoices-with-variances-1) | Primary |
+| 6 | [SAP KBA 3769147: missing-GR + tolerance DW](https://userapps.support.sap.com/sap/support/knowledge/en/3769147) | Primary |
+| 7 | [SSMP: subset-sum reconciliation (J.P. Morgan, ECAI 2025)](https://arxiv.org/html/2508.19218) | Primary |
+| 8 | [SupplierRecon methodology](https://supplierrecon.com/methodology/) | Primary (vendor kecil, ilustratif) |
+
+*Statistik: 5 sudut pencarian, 23 sumber diambil, 111 klaim, 25 diverifikasi (25✓/0✗), 10 temuan setelah sintesis.*

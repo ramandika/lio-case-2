@@ -3,8 +3,26 @@
 Validate everything:
 
 ```bash
-python3 -I tests/validate.py tests
+python3 -I tests/validate.py tests                 # solver eksak (solve.py)
+python3 -I tests/validate.py -s industry_match.py tests   # engine industri
 ```
+
+Dua engine diuji terhadap suite yang sama:
+
+| Engine | Hasil | Waktu suite penuh |
+|---|---|---|
+| `solve.py` (eksak naif, integer-cent) | 44/44 | ~5 menit |
+| `industry_match.py` (pipeline industri) | 44/44 | ~2.6 detik |
+
+`industry_match.py` menerapkan praktik yang terverifikasi di riset #2
+(`deep-research-order-matching.md`): Stage 0 policy check (k 1..10, harga
+positif), Stage R binding referensi eksak dari deskripsi line (tanpa fuzzy —
+semantik Business Central), Stage S bounded search dengan sum-feasibility
+bounds + backtracking global antar-header + node budget, Stage V review queue
+(NEEDS_REVIEW / BLOCKED_POLICY, tak pernah auto-match) ke
+`*_report.json`, opsi `--tolerance-cents` ala band toleransi ERP, dan deteksi
+line duplikat. Header yang tak terpecahkan = exit non-zero (analog invoice
+tak-bisa-dibayar), bukan kegagalan senyap.
 
 Validator (`validate.py`) runs `solve.py` on every case, then enforces the
 README criteria: per-header line count == `total_lines`, cent-exact sum ==
@@ -35,9 +53,11 @@ matching counts).
 
 ## Temuan kinerja (dari perf-stress)
 
-Biaya dominan solver adalah enumerasi per header, Σ C(n,k) — jadi **k
+Biaya dominan solver naif adalah enumerasi per header, Σ C(n,k) — jadi **k
 (number of lines per header), bukan jumlah line total, yang mendominasi**.
 Pada n≈300 dan k=10, C(300,10) ≈ 1.6×10^17 kombinasi membuat solver naif tak
-pernah selesai (`wide-k10` dikunci ke n=32, masih 221s). Langkah optimasi
-berikutnya: enumerasi sadar-sum (prune k feasibility via prefix bounds /
-meet-in-the-middle), atau CP-SAT dengan table constraint per header.
+pernah selesai (`wide-k10` dikunci ke n=32, masih 221s).
+
+`industry_match.py` menyelesaikan `wide-k10` dalam <1s berkat
+sum-feasibility bounds (prune via prefix min/max) — menutup gap kinerja yang
+disebut di atas pada case yang diuji.
