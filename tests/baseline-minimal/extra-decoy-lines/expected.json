@@ -1,0 +1,14 @@
+{
+  "expect_solvable": true,
+  "ground_truth": {
+    "1": [
+      "Innovative mission-critical interface",
+      "Realigned mission-critical projection"
+    ],
+    "2": [
+      "Adaptive mission-critical monitoring",
+      "Organized optimal pricing-structure",
+      "Reactive dynamic matrix"
+    ]
+  }
+}

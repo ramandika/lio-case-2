@@ -1,0 +1,90 @@
+{
+  "expect_solvable": true,
+  "ground_truth": {
+    "390": [
+      "Portable whiteboard (SKU 10094)",
+      "Wide-mouth wireless router (SKU 10160)",
+      "Professional water bottle (SKU 10250)",
+      "Low-profile hand scanner (SKU 10253)"
+    ],
+    "251": [
+      "Insulated envelope pack (SKU 10318)",
+      "Industrial whiteboard (SKU 10380)",
+      "Matte-finish keyboard tray (SKU 10425)"
+    ],
+    "662": [
+      "Low-profile wall charger (SKU 10469)",
+      "Heavy-duty clipboard holder (SKU 10533)",
+      "Magnetic clipboard holder (SKU 10568)"
+    ],
+    "753": [
+      "Cushioned projector (SKU 10662)",
+      "Reinforced envelope pack (SKU 10714)",
+      "Tamper-proof safety goggles (SKU 10718)"
+    ],
+    "130": [
+      "Foldable water bottle (SKU 10792)",
+      "Wide-mouth footrest (SKU 10812)",
+      "Anti-static utility knife (SKU 10902)"
+    ],
+    "303": [
+      "Portable desk organizer (SKU 10995)",
+      "Foldable extension cord (SKU 11012)",
+      "Brushed-steel notebook (SKU 11048)"
+    ],
+    "156": [
+      "Artisanal desk organizer (SKU 11058)",
+      "Foldable binder (SKU 11100)",
+      "Modular paper ream (SKU 11159)"
+    ],
+    "604": [
+      "Portable tripod (SKU 11245)",
+      "Portable backpack (SKU 11293)",
+      "Cushioned keyboard (SKU 11337)"
+    ],
+    "670": [
+      "Brushed-steel envelope pack (SKU 11421)",
+      "Industrial tape dispenser (SKU 11466)"
+    ],
+    "330": [
+      "Matte-finish printer ink (SKU 11498)",
+      "Artisanal extension cord (SKU 11516)"
+    ],
+    "886": [
+      "Self-sealing tool kit (SKU 11584)",
+      "Low-profile wireless router (SKU 11642)"
+    ],
+    "213": [
+      "Vented label maker (SKU 11739)",
+      "Matte-finish tape dispenser (SKU 11818)"
+    ],
+    "322": [
+      "Professional webcam (SKU 11912)",
+      "Refurbished desk lamp (SKU 11913)"
+    ],
+    "466": [
+      "Heavy-duty usb hub (SKU 11937)",
+      "Heavy-duty power bank (SKU 11948)"
+    ],
+    "675": [
+      "Durable safety goggles (SKU 11985)",
+      "Adjustable tripod (SKU 12040)"
+    ],
+    "408": [
+      "Recycled desk organizer (SKU 12057)",
+      "Double-wall footrest (SKU 12148)"
+    ],
+    "717": [
+      "Organic safety goggles (SKU 12176)"
+    ],
+    "219": [
+      "Stainless work gloves (SKU 12247)"
+    ],
+    "299": [
+      "Wireless power bank (SKU 12288)"
+    ],
+    "230": [
+      "Professional work gloves (SKU 12342)"
+    ]
+  }
+}

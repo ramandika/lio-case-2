@@ -1,0 +1,8 @@
+{
+  "expect_solvable": true,
+  "ground_truth": {
+    "1": [
+      "Business-focused grid-enabled interface"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "expect_solvable": true,
+  "ground_truth": {
+    "1": [
+      "Distributed 24/7 portal",
+      "Organic actuating neural-net",
+      "Quality-focused asymmetric emulation",
+      "Quality-focused dynamic projection"
+    ],
+    "2": [
+      "Optimized actuating toolset",
+      "Reactive grid-enabled database",
+      "Seamless client-driven toolset"
+    ],
+    "3": [
+      "Innovative object-oriented groupware",
+      "Networked holistic interface"
+    ]
+  }
+}

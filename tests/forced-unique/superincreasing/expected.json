@@ -1,0 +1,18 @@
+{
+  "expect_solvable": true,
+  "ground_truth": {
+    "1": [
+      "Enterprise emulation #2940",
+      "Quality-focused interface #7646"
+    ],
+    "2": [
+      "Digital migration #7693",
+      "Balanced software #2014",
+      "Balanced database #1820"
+    ],
+    "3": [
+      "Adaptive groupware #1297",
+      "Integrated framework #6863"
+    ]
+  }
+}

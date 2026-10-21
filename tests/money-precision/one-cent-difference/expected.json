@@ -1,0 +1,15 @@
+{
+  "expect_solvable": true,
+  "ground_truth": {
+    "1": [
+      "Inverse payroll",
+      "Managed payroll",
+      "Synchronized clearance"
+    ],
+    "2": [
+      "Grass-roots budget",
+      "Horizontal commission",
+      "Secured balance"
+    ]
+  }
+}

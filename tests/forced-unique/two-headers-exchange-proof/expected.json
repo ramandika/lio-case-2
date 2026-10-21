@@ -1,0 +1,14 @@
+{
+  "expect_solvable": true,
+  "ground_truth": {
+    "1": [
+      "Centralized standardization #5316",
+      "Integrated data-warehouse #9473"
+    ],
+    "2": [
+      "Integrated infrastructure #3903",
+      "Re-engineered groupware #6338",
+      "User-friendly portal #1493"
+    ]
+  }
+}

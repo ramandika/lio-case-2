@@ -1,0 +1,17 @@
+{
+  "expect_solvable": true,
+  "ground_truth": {
+    "1": [
+      "Aggregate debit",
+      "Balanced invoice",
+      "Balanced tariff",
+      "Enhanced advance",
+      "Horizontal deposit",
+      "Horizontal receipt",
+      "Horizontal settlement",
+      "Open-architected ledger",
+      "Reduced rebate",
+      "Synchronized rebate"
+    ]
+  }
+}

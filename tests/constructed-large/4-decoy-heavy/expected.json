@@ -1,0 +1,53 @@
+{
+  "expect_solvable": true,
+  "ground_truth": {
+    "465": [
+      "Industrial envelope pack (SKU 10032)",
+      "Smart paper ream (SKU 10068)",
+      "Lightweight marker set (SKU 10115)",
+      "Durable laptop stand (SKU 10189)"
+    ],
+    "728": [
+      "Industrial tool kit (SKU 10204)",
+      "Wireless clipboard holder (SKU 10244)",
+      "Industrial desk lamp (SKU 10256)",
+      "Stainless wall charger (SKU 10297)"
+    ],
+    "737": [
+      "Brushed-steel water bottle (SKU 10350)",
+      "Wireless cable (SKU 10394)",
+      "Bluetooth-enabled footrest (SKU 10473)",
+      "Modular usb hub (SKU 10537)"
+    ],
+    "496": [
+      "Stackable calculator (SKU 10584)",
+      "Organic work gloves (SKU 10629)",
+      "Magnetic thermos (SKU 10656)",
+      "Refurbished safety goggles (SKU 10698)"
+    ],
+    "329": [
+      "Anti-static laminator (SKU 10713)",
+      "Anti-static safety goggles (SKU 10778)",
+      "Stackable index cards (SKU 10826)",
+      "Modular work gloves (SKU 10840)"
+    ],
+    "313": [
+      "Matte-finish marker set (SKU 10912)",
+      "Adjustable keyboard (SKU 10929)",
+      "Lightweight keyboard tray (SKU 10961)",
+      "Refurbished tool kit (SKU 10989)"
+    ],
+    "446": [
+      "Lightweight footrest (SKU 11009)",
+      "Wireless padlock (SKU 11051)",
+      "Self-sealing index cards (SKU 11123)",
+      "Matte-finish usb hub (SKU 11198)"
+    ],
+    "768": [
+      "Anti-static tool kit (SKU 11232)",
+      "Industrial webcam (SKU 11294)",
+      "Organic label maker (SKU 11325)",
+      "Tamper-proof wireless router (SKU 11394)"
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "expect_solvable": true,
+  "ground_truth": {
+    "1": [
+      "Enterprise emulation #9443",
+      "Fluctuating open-system #6076",
+      "Modular standardization #8374",
+      "Profound protocol #2479",
+      "Quality-focused neural-net #6671"
+    ]
+  }
+}

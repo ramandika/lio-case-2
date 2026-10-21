@@ -1,0 +1,13 @@
+{
+  "expect_solvable": true,
+  "ground_truth": {
+    "1": [
+      "Business-focused next-generation toolset",
+      "Extended grid-enabled circuit",
+      "Integrated actuating circuit"
+    ],
+    "2": [
+      "Synergized grid-enabled emulation"
+    ]
+  }
+}

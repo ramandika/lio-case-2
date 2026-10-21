@@ -1,0 +1,29 @@
+{
+  "expect_solvable": true,
+  "ground_truth": {
+    "1": [
+      "Cross-platform fee",
+      "Enhanced commission",
+      "Managed premium",
+      "Persistent escrow",
+      "Secured escrow",
+      "Secured premium",
+      "Stand-alone commission",
+      "Synchronized commission",
+      "Synchronized payroll",
+      "Up-sized ledger"
+    ],
+    "2": [
+      "Balanced tariff",
+      "Configurable clearance",
+      "Horizontal budget",
+      "Horizontal invoice",
+      "Managed clearance",
+      "Multi-tiered balance",
+      "Persistent commission",
+      "Secured invoice",
+      "Secured ledger",
+      "Synchronized account"
+    ]
+  }
+}

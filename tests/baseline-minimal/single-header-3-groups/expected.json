@@ -1,0 +1,10 @@
+{
+  "expect_solvable": true,
+  "ground_truth": {
+    "1": [
+      "Business-focused grid-enabled instruction-set",
+      "Quality-focused logistical array",
+      "Realigned stable product"
+    ]
+  }
+}

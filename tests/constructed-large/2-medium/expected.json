@@ -1,0 +1,55 @@
+{
+  "expect_solvable": true,
+  "ground_truth": {
+    "649": [
+      "Matte-finish usb hub (SKU 10092)",
+      "Professional tool kit (SKU 10177)",
+      "Tamper-proof clipboard (SKU 10215)",
+      "Solar padlock (SKU 10288)"
+    ],
+    "712": [
+      "Digital utility knife (SKU 10320)",
+      "Tamper-proof laminator (SKU 10362)",
+      "Solar stapler (SKU 10421)",
+      "Compact keyboard tray (SKU 10506)"
+    ],
+    "802": [
+      "Wide-mouth cable (SKU 10549)",
+      "Compact projector (SKU 10581)",
+      "Lightweight storage bin (SKU 10591)"
+    ],
+    "323": [
+      "Double-wall cable (SKU 10650)",
+      "Smart safety goggles (SKU 10665)",
+      "Reinforced cable (SKU 10675)"
+    ],
+    "141": [
+      "Lightweight keyboard (SKU 10765)",
+      "Lightweight laptop stand (SKU 10767)",
+      "Artisanal laptop stand (SKU 10793)"
+    ],
+    "445": [
+      "Compact footrest (SKU 10834)",
+      "Silicone-grip extension cord (SKU 10853)",
+      "Premium desk organizer (SKU 10860)"
+    ],
+    "819": [
+      "Bluetooth-enabled stapler (SKU 10922)",
+      "Ergonomic whiteboard (SKU 10923)",
+      "Stainless clipboard holder (SKU 10977)"
+    ],
+    "357": [
+      "Artisanal safety goggles (SKU 11013)",
+      "Stackable laminator (SKU 11028)",
+      "Water-resistant storage bin (SKU 11097)"
+    ],
+    "835": [
+      "Matte-finish backpack (SKU 11128)",
+      "Recycled keyboard (SKU 11202)"
+    ],
+    "614": [
+      "Weatherproof cable (SKU 11216)",
+      "Wide-mouth notebook (SKU 11279)"
+    ]
+  }
+}

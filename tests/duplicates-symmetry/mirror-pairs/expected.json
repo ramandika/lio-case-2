@@ -1,0 +1,19 @@
+{
+  "expect_solvable": true,
+  "ground_truth": {
+    "1": [
+      "integrated projection 000",
+      "exclusive interface 002"
+    ],
+    "2": [
+      "managed database 004",
+      "business-focused archive 006"
+    ],
+    "3": [
+      "adaptive synergy 008"
+    ],
+    "4": [
+      "fluctuating benchmark 009"
+    ]
+  }
+}

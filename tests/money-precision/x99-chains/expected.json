@@ -1,0 +1,23 @@
+{
+  "expect_solvable": true,
+  "ground_truth": {
+    "1": [
+      "Cross-platform invoice",
+      "Enhanced escrow",
+      "Horizontal escrow",
+      "Inverse advance",
+      "Managed account"
+    ],
+    "2": [
+      "Aggregate fee",
+      "Future-proofed payroll",
+      "Grass-roots premium",
+      "Persistent receipt"
+    ],
+    "3": [
+      "Balanced premium",
+      "Grass-roots commission",
+      "Up-sized tariff"
+    ]
+  }
+}

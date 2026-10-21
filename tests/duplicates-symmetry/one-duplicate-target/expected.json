@@ -1,0 +1,17 @@
+{
+  "expect_solvable": true,
+  "ground_truth": {
+    "1": [
+      "exclusive firmware 000",
+      "business-focused circuit 002"
+    ],
+    "2": [
+      "managed matrix 001",
+      "integrated database 003"
+    ],
+    "3": [
+      "managed protocol 004",
+      "exclusive protocol 005"
+    ]
+  }
+}

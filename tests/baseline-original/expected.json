@@ -1,0 +1,13 @@
+{
+  "expect_solvable": true,
+  "ground_truth": {
+    "1": ["Organized context-sensitive matrix"],
+    "2": ["Re-contextualized 24/7 matrices", "Organic coherent task-force"],
+    "3": ["Reactive object-oriented groupware"],
+    "4": ["Centralized optimizing projection", "Business-focused stable product",
+          "Implemented next generation database", "Digitized client-driven circuit"],
+    "5": ["Quality-focused real-time hierarchy", "Realigned global project",
+          "Synergized regional monitoring", "Seamless even-keeled instruction set",
+          "Team-oriented full-range hub"]
+  }
+}

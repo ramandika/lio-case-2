@@ -1,0 +1,27 @@
+{
+  "expect_solvable": true,
+  "ground_truth": {
+    "1": [
+      "managed matrix 000",
+      "centralized synergy 005"
+    ],
+    "2": [
+      "business-focused interface 001",
+      "business-focused matrix 006"
+    ],
+    "3": [
+      "grid-enabled projection 002",
+      "business-focused circuit 003",
+      "business-focused matrix 007",
+      "exclusive synergy 008"
+    ],
+    "4": [
+      "fluctuating matrix 009",
+      "managed benchmark 010"
+    ],
+    "5": [
+      "exclusive synergy 004",
+      "fluctuating circuit 011"
+    ]
+  }
+}

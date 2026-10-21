@@ -1,0 +1,17 @@
+{
+  "expect_solvable": true,
+  "ground_truth": {
+    "1": [
+      "integrated archive 000"
+    ],
+    "2": [
+      "managed matrix 001",
+      "grid-enabled archive 002"
+    ],
+    "3": [
+      "fluctuating database 003",
+      "horizontal archive 004",
+      "grid-enabled matrix 005"
+    ]
+  }
+}

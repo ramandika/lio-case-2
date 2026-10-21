@@ -1,0 +1,29 @@
+{
+  "expect_solvable": true,
+  "ground_truth": {
+    "449": [
+      "Lightweight thermos (SKU 10013)",
+      "Solar whiteboard (SKU 10066)",
+      "Recycled wireless router (SKU 10104)",
+      "Foldable laptop stand (SKU 10111)",
+      "Ergonomic desk organizer (SKU 10126)",
+      "Artisanal desk lamp (SKU 10146)"
+    ],
+    "348": [
+      "Collapsible envelope pack (SKU 10183)",
+      "Recycled cable (SKU 10191)",
+      "Anti-static whiteboard (SKU 10264)",
+      "Self-sealing paper ream (SKU 10276)"
+    ],
+    "569": [
+      "Heavy-duty calculator (SKU 10370)",
+      "Tamper-proof webcam (SKU 10417)"
+    ],
+    "136": [
+      "Brushed-steel notebook (SKU 10453)"
+    ],
+    "762": [
+      "Double-wall tool kit (SKU 10529)"
+    ]
+  }
+}

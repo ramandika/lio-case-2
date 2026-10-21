@@ -1,0 +1,41 @@
+{
+  "expect_solvable": true,
+  "ground_truth": {
+    "1": [
+      "Innovative even-keeled emulation",
+      "Proactive mission-critical pricing-structure",
+      "Extended grid-enabled pricing-structure",
+      "Networked logistical groupware",
+      "Proactive next-generation firmware",
+      "Decentralized logistical projection",
+      "Quality-focused optimal projection",
+      "Centralized asymmetric pricing-structure",
+      "Optimized 24/7 hub",
+      "Integrated 24/7 toolset"
+    ],
+    "2": [
+      "Digitized composite product",
+      "Proactive asymmetric database",
+      "Networked grid-enabled neural-net",
+      "Quality-focused stable instruction-set",
+      "Quality-focused mission-critical knowledge-base",
+      "Reactive even-keeled database",
+      "Decentralized asymmetric interface",
+      "Realigned dynamic portal",
+      "Decentralized mission-critical capacity",
+      "Networked next-generation array"
+    ],
+    "3": [
+      "Adaptive 24/7 matrix",
+      "Organized grid-enabled circuit",
+      "Reactive client-driven database",
+      "Decentralized asymmetric toolset",
+      "Realigned even-keeled product",
+      "Customizable interactive portal",
+      "Optimized composite interface",
+      "Synergized actuating interface",
+      "Centralized stable matrix",
+      "Synergized mission-critical instruction-set"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "expect_solvable": true,
+  "ground_truth": {
+    "1": [
+      "Streamlined interface #4170"
+    ],
+    "2": [
+      "Open-architected policy #6202",
+      "Lagged support #2822"
+    ],
+    "3": [
+      "Balanced hardware #1642"
+    ],
+    "4": [
+      "Enterprise success #4336",
+      "Total database #2697",
+      "Total interface #6412",
+      "Re-engineered hardware #6280"
+    ]
+  }
+}

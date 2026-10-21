@@ -1,0 +1,29 @@
+{
+  "expect_solvable": true,
+  "ground_truth": {
+    "1": [
+      "Realigned logistical toolset",
+      "Proactive interactive product",
+      "Networked mission-critical emulation",
+      "Optimized logistical groupware",
+      "Optimized next-generation portal",
+      "Customizable dynamic hub",
+      "Realigned grid-enabled instruction-set",
+      "Proactive optimal groupware",
+      "Digitized standalone capacity",
+      "Synergized asymmetric core"
+    ],
+    "2": [
+      "Seamless stable core",
+      "Decentralized object-oriented firmware",
+      "Organized holistic projection",
+      "Organic object-oriented array",
+      "Customizable even-keeled core",
+      "Decentralized heuristic knowledge-base",
+      "Seamless even-keeled projection",
+      "Organic heuristic groupware",
+      "Digitized composite groupware",
+      "Adaptive stable interface"
+    ]
+  }
+}

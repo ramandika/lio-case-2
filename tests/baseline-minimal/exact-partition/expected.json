@@ -1,0 +1,19 @@
+{
+  "expect_solvable": true,
+  "ground_truth": {
+    "1": [
+      "Extended actuating database"
+    ],
+    "2": [
+      "Centralized object-oriented neural-net",
+      "Digitized client-driven firmware",
+      "Reactive object-oriented emulation"
+    ],
+    "3": [
+      "Decentralized optimal neural-net",
+      "Integrated grid-enabled groupware",
+      "Networked interactive hub",
+      "Reactive heuristic instruction-set"
+    ]
+  }
+}

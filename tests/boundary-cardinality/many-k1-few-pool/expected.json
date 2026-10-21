@@ -1,0 +1,29 @@
+{
+  "expect_solvable": true,
+  "ground_truth": {
+    "1": [
+      "Digitized mission-critical knowledge-base"
+    ],
+    "2": [
+      "Networked asymmetric product"
+    ],
+    "3": [
+      "Digitized mission-critical circuit"
+    ],
+    "4": [
+      "Centralized heuristic groupware"
+    ],
+    "5": [
+      "Organized next-generation core"
+    ],
+    "6": [
+      "Decentralized coherent array"
+    ],
+    "7": [
+      "Realigned 24/7 firmware"
+    ],
+    "8": [
+      "Distributed actuating database"
+    ]
+  }
+}

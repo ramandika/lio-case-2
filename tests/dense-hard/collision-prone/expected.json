@@ -1,0 +1,16 @@
+{
+  "expect_solvable": true,
+  "ground_truth": {
+    "1": [
+      "Customizable interactive matrix",
+      "Synergized mission-critical capacity"
+    ],
+    "2": [
+      "Customizable next-generation matrix",
+      "Organized stable groupware"
+    ],
+    "3": [
+      "Distributed client-driven projection"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "expect_solvable": true,
+  "ground_truth": {
+    "1": [
+      "Centralized dynamic matrix",
+      "Innovative heuristic interface",
+      "Organic object-oriented core"
+    ],
+    "2": [
+      "Innovative actuating array",
+      "Quality-focused holistic neural-net",
+      "Synergized client-driven projection"
+    ],
+    "3": [
+      "Adaptive logistical projection",
+      "Decentralized even-keeled knowledge-base",
+      "Extended asymmetric hub"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "expect_solvable": true,
+  "ground_truth": {
+    "1": [
+      "Customizable logistical portal",
+      "Networked dynamic circuit",
+      "Networked holistic neural-net"
+    ],
+    "2": [
+      "Networked logistical groupware",
+      "Realigned stable database"
+    ],
+    "3": [
+      "Integrated client-driven toolset",
+      "Organic mission-critical database"
+    ]
+  }
+}
